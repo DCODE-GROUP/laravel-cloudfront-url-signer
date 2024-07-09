@@ -38,7 +38,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Dreamonkey\\CloudFrontUrlSigner\\": "src"
+      "Dcodegroup\\CloudFrontUrlSigner\\": "src"
     },
     "files": [
       "src/helpers.php"
@@ -46,16 +46,16 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Dreamonkey\\CloudFrontUrlSigner\\Tests\\": "tests"
+      "Dcodegroup\\CloudFrontUrlSigner\\Tests\\": "tests"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Dreamonkey\\CloudFrontUrlSigner\\CloudFrontUrlSignerServiceProvider"
+        "Dcodegroup\\CloudFrontUrlSigner\\CloudFrontUrlSignerServiceProvider"
       ],
       "aliases": {
-        "CloudFrontUrlSigner": "Dreamonkey\\CloudFrontUrlSigner\\Facades\\CloudFrontUrlSigner"
+        "CloudFrontUrlSigner": "Dcodegroup\\CloudFrontUrlSigner\\Facades\\CloudFrontUrlSigner"
       }
     }
   }
