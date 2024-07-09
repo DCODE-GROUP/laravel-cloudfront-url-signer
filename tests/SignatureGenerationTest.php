@@ -1,6 +1,6 @@
 <?php
 
-namespace Dreamonkey\CloudFrontUrlSigner\Tests;
+namespace Dcodegroup\CloudFrontUrlSigner\Tests;
 
 use DateTime;
 use DateTimeZone;
@@ -24,7 +24,7 @@ class SignatureGenerationTest extends TestCase
     {
         $instance = $this->app['cloudfront-url-signer'];
 
-        $this->assertInstanceOf(\Dreamonkey\CloudFrontUrlSigner\CloudFrontUrlSigner::class, $instance);
+        $this->assertInstanceOf(\Dcodegroup\CloudFrontUrlSigner\CloudFrontUrlSigner::class, $instance);
     }
 
     /**
@@ -32,7 +32,7 @@ class SignatureGenerationTest extends TestCase
      */
     public function it_will_throw_an_exception_for_an_empty_key_pair_id()
     {
-        $this->expectException(\Dreamonkey\CloudFrontUrlSigner\Exceptions\InvalidKeyPairId::class);
+        $this->expectException(\Dcodegroup\CloudFrontUrlSigner\Exceptions\InvalidKeyPairId::class);
 
         config(['cloudfront-url-signer.key_pair_id' => '']);
 
@@ -68,7 +68,7 @@ class SignatureGenerationTest extends TestCase
      */
     public function it_does_not_allow_expiration_in_the_past_when_integer_is_given()
     {
-        $this->expectException(\Dreamonkey\CloudFrontUrlSigner\Exceptions\InvalidExpiration::class);
+        $this->expectException(\Dcodegroup\CloudFrontUrlSigner\Exceptions\InvalidExpiration::class);
 
         $expiration = -5;
 
@@ -80,7 +80,7 @@ class SignatureGenerationTest extends TestCase
      */
     public function it_does_not_allow_expiration_in_the_past_when_datetime_is_given()
     {
-        $this->expectException(\Dreamonkey\CloudFrontUrlSigner\Exceptions\InvalidExpiration::class);
+        $this->expectException(\Dcodegroup\CloudFrontUrlSigner\Exceptions\InvalidExpiration::class);
 
         $expiration = DateTime::createFromFormat('d/m/Y H:i:s', '10/08/2005 18:15:44');
 

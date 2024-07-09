@@ -1,6 +1,6 @@
 <?php
 
-namespace Dreamonkey\CloudFrontUrlSigner;
+namespace Dcodegroup\CloudFrontUrlSigner;
 
 interface UrlSigner
 {

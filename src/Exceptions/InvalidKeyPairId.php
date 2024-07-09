@@ -1,6 +1,6 @@
 <?php
 
-namespace Dreamonkey\CloudFrontUrlSigner\Exceptions;
+namespace Dcodegroup\CloudFrontUrlSigner\Exceptions;
 
 class InvalidKeyPairId extends \Exception
 {
