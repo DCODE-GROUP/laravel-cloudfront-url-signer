@@ -1,6 +1,7 @@
 vendor/
 node_modules/
 npm-debug.log
+composer.lock
 
 # Laravel 5 & Lumen specific
 public/storage
@@ -16,3 +17,4 @@ Homestead.json
 
 .idea
 .vscode
+
