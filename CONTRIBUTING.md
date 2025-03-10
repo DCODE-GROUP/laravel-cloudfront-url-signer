@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/dreamonkey/laravel-cludfront-url-signer).
+We accept contributions via Pull Requests on [Github](https://github.com/DCODE-GROUP/laravel-cludfront-url-signer).
 
 
 ## Pull Requests

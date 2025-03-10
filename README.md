@@ -4,8 +4,8 @@ Easy to use Laravel 6+ wrapper around the official AWS PHP SDK which allows to s
 
 Inspired by [laravel-url-signer](https://github.com/spatie/laravel-url-signer)
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/dreamonkey/laravel-cloudfront-url-signer.svg?style=flat-square)](https://packagist.org/packages/dreamonkey/laravel-cloudfront-url-signer)
-[![Total Downloads](https://img.shields.io/packagist/dt/dreamonkey/laravel-cloudfront-url-signer.svg?style=flat-square)](https://packagist.org/packages/dreamonkey/laravel-cloudfront-url-signer)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/dcodegroup/laravel-cloudfront-url-signer.svg?style=flat-square)](https://packagist.org/packages/dcodegroup/laravel-cloudfront-url-signer)
+[![Total Downloads](https://img.shields.io/packagist/dt/dcodegroup/laravel-cloudfront-url-signer.svg?style=flat-square)](https://packagist.org/packages/dcodegroup/laravel-cloudfront-url-signer)
 
 This package can create canned policies signed URLs for CloudFront which expires after a given time. This is done by wrapping the AWS SDK method adding a Laravel-style configuration and accessibility.
 
@@ -26,7 +26,7 @@ The output is compliant with [CloudFront specifications](https://docs.aws.amazon
 The package can be installed via Composer:
 
 ```
-composer require dreamonkey/laravel-cloudfront-url-signer
+composer require dcodegroup/laravel-cloudfront-url-signer
 ```
 
 ## Configuration
@@ -34,7 +34,7 @@ composer require dreamonkey/laravel-cloudfront-url-signer
 The configuration file can optionally be published via:
 
 ```
-php artisan vendor:publish --provider="Dreamonkey\CloudFrontUrlSigner\CloudFrontUrlSignerServiceProvider"
+php artisan vendor:publish --provider="dcodegroup\CloudFrontUrlSigner\CloudFrontUrlSignerServiceProvider"
 ```
 
 This is the content of the file:
@@ -107,7 +107,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email p.caleffi@dreamonkey.com instead of using the issue tracker.
+If you discover any security related issues, please email forge@dcodegroup.com instead of using the issue tracker.
 
 ## Credits
 
