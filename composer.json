@@ -11,10 +11,15 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Paolo Caleffi",
-      "email": "p.caleffi@dreamonkey.com",
-      "homepage": "https://dreamonkey.com",
+      "name": "Nathan Rzepecki",
+      "email": "nathan@lionslair.net.au",
+      "homepage": "https://nathanrzepecki.me",
       "role": "Developer"
+    },
+    {
+      "name": "Dcode Group",
+      "email": "forge@dcodegroup.com",
+      "homepage": "https://dcodegroup.com"
     }
   ],
   "require": {
