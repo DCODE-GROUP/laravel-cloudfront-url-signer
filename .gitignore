@@ -13,3 +13,6 @@ Homestead.yaml
 Homestead.json
 
 .phpunit.result.cache
+
+.idea
+.vscode
