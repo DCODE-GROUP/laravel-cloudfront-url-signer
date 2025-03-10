@@ -1,8 +1,8 @@
 <?php
 
-namespace Dreamonkey\CloudFrontUrlSigner\Tests;
+namespace Dcodegroup\CloudFrontUrlSigner\Tests;
 
-use Dreamonkey\CloudFrontUrlSigner\CloudFrontUrlSignerServiceProvider;
+use Dcodegroup\CloudFrontUrlSigner\CloudFrontUrlSignerServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra

@@ -1,6 +1,6 @@
 <?php
 
-use Dreamonkey\CloudFrontUrlSigner\UrlSigner;
+use Dcodegroup\CloudFrontUrlSigner\UrlSigner;
 
 if (!function_exists('sign')) {
     /**

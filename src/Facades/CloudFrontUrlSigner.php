@@ -1,6 +1,6 @@
 <?php
 
-namespace Dreamonkey\CloudFrontUrlSigner\Facades;
+namespace Dcodegroup\CloudFrontUrlSigner\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

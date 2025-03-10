@@ -1,8 +1,8 @@
 <?php
 
-namespace Dreamonkey\CloudFrontUrlSigner;
+namespace Dcodegroup\CloudFrontUrlSigner;
 
-use Dreamonkey\CloudFrontUrlSigner\Exceptions\InvalidKeyPairId;
+use Dcodegroup\CloudFrontUrlSigner\Exceptions\InvalidKeyPairId;
 use Illuminate\Support\ServiceProvider;
 
 class CloudFrontUrlSignerServiceProvider extends ServiceProvider

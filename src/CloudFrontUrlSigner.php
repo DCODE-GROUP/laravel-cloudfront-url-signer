@@ -1,9 +1,9 @@
 <?php
 
-namespace Dreamonkey\CloudFrontUrlSigner;
+namespace Dcodegroup\CloudFrontUrlSigner;
 
 use DateTime;
-use Dreamonkey\CloudFrontUrlSigner\Exceptions\InvalidExpiration;
+use Dcodegroup\CloudFrontUrlSigner\Exceptions\InvalidExpiration;
 
 class CloudFrontUrlSigner implements UrlSigner
 {
@@ -29,7 +29,7 @@ class CloudFrontUrlSigner implements UrlSigner
      * @param \DateTime|int|null $expiration
      *
      * @return string
-     * @throws \Dreamonkey\CloudFrontUrlSigner\Exceptions\InvalidExpiration
+     * @throws \Dcodegroup\CloudFrontUrlSigner\Exceptions\InvalidExpiration
      */
     public function sign(string $url, $expiration = null): string
     {
@@ -59,7 +59,7 @@ class CloudFrontUrlSigner implements UrlSigner
      *                                  - int: The expiration time will be set to X days from now
      *
      * @return int
-     * @throws \Dreamonkey\CloudFrontUrlSigner\Exceptions\InvalidExpiration
+     * @throws \Dcodegroup\CloudFrontUrlSigner\Exceptions\InvalidExpiration
      */
     protected function getExpirationTimestamp($expiration): int
     {
