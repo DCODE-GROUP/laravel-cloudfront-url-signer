@@ -1,10 +1,6 @@
-## Kanopi
+## Issue
 
-<!-- Link to the Kanopi ticket (internal only) | Add link to demo eg wip or upgrade environment if one exists -->
-
-## Bugsnag
-
-<!-- Link to Bugsnag Issue | Remove if not applicable -->
+<!-- Link to the issue this PR is related to | Add link to demo eg wip or upgrade environment if one exists -->
 
 ## Key Points
 
@@ -26,3 +22,5 @@
 - Note #2
 
 ## Screenshots
+
+<!-- Add Screenshots of changes if applicable -->
