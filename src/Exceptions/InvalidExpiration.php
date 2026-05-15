@@ -2,6 +2,4 @@
 
 namespace Dcodegroup\CloudFrontUrlSigner\Exceptions;
 
-class InvalidExpiration extends \Exception
-{
-}
+class InvalidExpiration extends \Exception {}

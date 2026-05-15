@@ -12,7 +12,7 @@ class CloudFrontUrlSignerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__ . '/../config/cloudfront-url-signer.php' => config_path('cloudfront-url-signer.php')], 'config');
+        $this->publishes([__DIR__.'/../config/cloudfront-url-signer.php' => config_path('cloudfront-url-signer.php')], 'config');
     }
 
     /**
@@ -20,7 +20,7 @@ class CloudFrontUrlSignerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/cloudfront-url-signer.php', 'cloudfront-url-signer');
+        $this->mergeConfigFrom(__DIR__.'/../config/cloudfront-url-signer.php', 'cloudfront-url-signer');
 
         $this->app->singleton(UrlSigner::class, function () {
             $config = config('cloudfront-url-signer');

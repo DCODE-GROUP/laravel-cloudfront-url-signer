@@ -7,10 +7,7 @@ interface UrlSigner
     /**
      * Get a secure URL to a controller action.
      *
-     * @param string $url
-     * @param mixed  $expiration
-     *
-     * @return string
+     * @param  mixed  $expiration
      */
     public function sign(string $url, $expiration): string;
 }

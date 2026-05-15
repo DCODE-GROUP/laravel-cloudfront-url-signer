@@ -2,6 +2,4 @@
 
 namespace Dcodegroup\CloudFrontUrlSigner\Exceptions;
 
-class InvalidKeyPairId extends \Exception
-{
-}
+class InvalidKeyPairId extends \Exception {}
