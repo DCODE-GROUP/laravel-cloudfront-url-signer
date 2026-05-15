@@ -17,20 +17,28 @@
       "role": "Developer"
     },
     {
+      "name": "Josh Young",
+      "email": "josh@jny986.com",
+      "homepage": "https://jny986.com",
+      "role": "Developer"
+    },
+    {
       "name": "Dcode Group",
       "email": "forge@dcodegroup.com",
       "homepage": "https://dcodegroup.com"
     }
   ],
   "require": {
-    "php": "^7.3.0|^8.0|^8.1|^8.2|^8.3|^8.4",
-    "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
-    "aws/aws-sdk-php": "^3.52|^4.0"
+    "php": "^8.3",
+    "illuminate/support": "^11.0|^12.0|^13.0",
+    "aws/aws-sdk-php": "^3.52"
   },
   "require-dev": {
-    "orchestra/testbench": "^6.0|^8.0|^9.0",
-    "phpunit/phpunit": "^8.0|^9.0|^10.5|^11.0",
-    "laravel/pint": "^1.21"
+    "orchestra/testbench": "^11.0",
+    "laravel/pint": "^1.21",
+    "pestphp/pest": "^4.7",
+    "pestphp/pest-plugin-laravel": "^4.1",
+    "larastan/larastan": "^3.9"
   },
   "autoload": {
     "psr-4": {
@@ -42,7 +50,10 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Dcodegroup\\CloudFrontUrlSigner\\Tests\\": "tests"
+      "Dcodegroup\\CloudFrontUrlSigner\\Tests\\": "tests",
+      "Workbench\\App\\": "workbench/app/",
+      "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+      "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
     }
   },
   "extra": {
@@ -53,6 +64,32 @@
       "aliases": {
         "CloudFrontUrlSigner": "Dcodegroup\\CloudFrontUrlSigner\\Facades\\CloudFrontUrlSigner"
       }
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@clear",
+      "@prepare"
+    ],
+    "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+    "prepare": "@php vendor/bin/testbench package:discover --ansi",
+    "build": "@php vendor/bin/testbench workbench:build --ansi",
+    "serve": [
+      "Composer\\Config::disableProcessTimeout",
+      "@build",
+      "@php vendor/bin/testbench serve --ansi"
+    ],
+    "lint": [
+      "@php vendor/bin/pint --ansi"
+    ],
+    "test": [
+      "@clear",
+      "@php vendor/bin/phpunit"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
     }
   }
 }

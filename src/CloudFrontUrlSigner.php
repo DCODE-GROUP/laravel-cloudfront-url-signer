@@ -14,9 +14,6 @@ class CloudFrontUrlSigner implements UrlSigner
      */
     private $urlSigner;
 
-    /**
-     * @param \Aws\CloudFront\UrlSigner $urlSigner
-     */
     public function __construct(\Aws\CloudFront\UrlSigner $urlSigner)
     {
         $this->urlSigner = $urlSigner;
@@ -25,11 +22,9 @@ class CloudFrontUrlSigner implements UrlSigner
     /**
      * Get a secure URL to a controller action.
      *
-     * @param string $url
-     * @param \DateTime|int|null $expiration
+     * @param  DateTime|int|null  $expiration
      *
-     * @return string
-     * @throws \Dcodegroup\CloudFrontUrlSigner\Exceptions\InvalidExpiration
+     * @throws InvalidExpiration
      */
     public function sign(string $url, $expiration = null): string
     {
@@ -41,37 +36,28 @@ class CloudFrontUrlSigner implements UrlSigner
 
     /**
      * Check if a timestamp is in the future.
-     *
-     * @param int $timestamp
-     *
-     * @return bool
      */
     protected function isFuture(int $timestamp): bool
     {
-        return ((int)$timestamp) >= (new DateTime())->getTimestamp();
+        return ((int) $timestamp) >= (new DateTime)->getTimestamp();
     }
 
     /**
      * Retrieve the expiration timestamp for a link based on an absolute DateTime or a relative number of days.
      *
-     * @param \DateTime|int $expiration The expiration date of this link.
-     *                                  - DateTime: The value will be used as expiration date
-     *                                  - int: The expiration time will be set to X days from now
+     * @param  DateTime|int  $expiration  The expiration date of this link.
+     *                                    - DateTime: The value will be used as expiration date
+     *                                    - int: The expiration time will be set to X days from now
      *
-     * @return int
-     * @throws \Dcodegroup\CloudFrontUrlSigner\Exceptions\InvalidExpiration
+     * @throws InvalidExpiration
      */
-    protected function getExpirationTimestamp($expiration): int
+    protected function getExpirationTimestamp(DateTime|int $expiration): int
     {
         if (is_int($expiration)) {
-            $expiration = (new DateTime())->modify((int)$expiration . ' days');
+            $expiration = (new DateTime)->modify((int) $expiration.' days');
         }
 
-        if (!$expiration instanceof DateTime) {
-            throw new InvalidExpiration('Expiration date must be an instance of DateTime or an integer');
-        }
-
-        if (!$this->isFuture($expiration->getTimestamp())) {
+        if (! $this->isFuture($expiration->getTimestamp())) {
             throw new InvalidExpiration('Expiration date must be in the future');
         }
 
